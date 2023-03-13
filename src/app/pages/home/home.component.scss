@@ -1,0 +1,87 @@
+@use "./../../../assets/styles/var.scss";
+
+.container {
+    height: calc(100vh - 110px);
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    align-items: center;
+    background: repeating-linear-gradient(
+        0deg,
+        var.$celeste-suave 0px,
+        var.$celeste-suave 10px,
+        var.$celeste-ligero 10px,
+        var.$celeste-ligero 50px,
+        var.$celeste-suave 50px,
+        var.$celeste-suave 60px,
+        var.$celeste-medio 60px,
+        var.$celeste-medio 90px,
+        var.$celeste-suave 90px,
+        var.$celeste-suave 100px,
+        var.$celeste-oscuro 100px,
+        var.$celeste-oscuro 140px,
+        var.$celeste-suave 140px,
+        var.$celeste-suave 150px,
+        var.$celeste-oscuro 150px,
+        var.$celeste-oscuro 160px,
+        var.$celeste-suave 160px,
+        var.$celeste-suave 170px,
+        var.$celeste-medio 170px,
+        var.$celeste-medio 190px,
+    );
+}
+
+app-card-pokemon{
+    margin-left: 250px;
+    z-index: 5;
+    transition: 0.8s;
+    transition-timing-function: ease-in-out;
+    &.abierto{
+        margin-left: 140px;
+    }
+}
+
+app-profile-pokemon{
+    position: absolute;
+    z-index: 3;
+    left: -90vw;
+    transition: 0.8s;
+    transition-timing-function: ease-in-out;
+    &.abierto{
+        left: 0;
+    }
+}
+
+.list-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    max-height: 95%;
+    overflow-y: scroll;
+}
+
+
+// MODIFICAR SCROL
+::-webkit-scrollbar{
+    width: 12px;
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color: #e9563d;
+    border-radius: 2px;
+    /* Con este truco hago el thumb más chico que su padre */
+    box-shadow: inset 0 0 0 2px #882a1a;
+     border-left: 1.5px solid transparent;
+     border-right: 1.5px solid transparent;
+     background-clip: padding-box;
+    cursor:grab;
+  }
+  ::-webkit-scrollbar-track {
+    border: solid #90ace7 2px;
+    cursor: pointer;
+    background: repeating-linear-gradient(
+      0deg,
+      #276d83,
+      #276d83 5px,
+      #1c4760 7px,
+      #1c4760 9px
+    );
+  }

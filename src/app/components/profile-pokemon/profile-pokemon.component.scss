@@ -1,0 +1,139 @@
+@use "./../../../assets/styles/var.scss";
+
+.full-container{
+    display: grid;
+    grid-template-columns: 1fr 0.1fr;
+}
+
+.container {
+    height: 720px;
+    width: 90vw;
+    background-color: var.$amarillo-pokemon;
+    display: grid;
+    grid-template-rows: 1fr 3fr 3fr;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+
+    .content-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 55%;
+        padding-right: 50px;
+        font-size: larger;
+
+        background-color: var.$gris-fondo-ligero;
+        background-image: linear-gradient(45deg, var.$gris-fondo-claro 25%, transparent 25%, transparent 75%, var.$gris-fondo-claro 75%, var.$gris-fondo-claro),
+            linear-gradient(-45deg, var.$gris-fondo-claro 25%, transparent 25%, transparent 75%, var.$gris-fondo-claro 75%, var.$gris-fondo-claro);
+        background-size: 20px 20px;
+
+    }
+
+    .content-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 55%;
+        padding-right: 50px;
+        font-size: larger;
+
+        background-color: var.$celeste-fondo-ligero;
+        background-image: linear-gradient(45deg, var.$celeste-fondo-claro 25%, transparent 25%, transparent 75%, var.$celeste-fondo-claro 75%, var.$celeste-fondo-claro),
+            linear-gradient(-45deg, var.$celeste-fondo-claro 25%, transparent 25%, transparent 75%, var.$celeste-fondo-claro 75%, var.$celeste-fondo-claro);
+        background-size: 20px 20px;
+    }
+
+    .content-3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 55%;
+        padding-right: 50px;
+        font-size: larger;
+
+        background: repeating-linear-gradient(0deg, var.$verde-fondo-ligero, var.$verde-fondo-ligero 2px, var.$verde-fondo-claro 2px, var.$verde-fondo-ligero 4px,
+            );
+
+
+    }
+}
+
+.descripcion{
+    background-color: #f8f7db;
+    display: grid;
+    grid-template-columns: 20px 1fr 20px;
+    border-radius: 10px;
+    height: 70%;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+      -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+      box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+    div{
+      background-color:#daeac4;
+      height: 90%;
+      margin: 5px;
+      margin-top: 10px;
+
+      &:content-1{
+        border-radius: 0 8px 8px 0;
+      }
+      &:content-3{
+        border-radius: 8px 0 0 8px;
+      }
+    }
+  }
+
+
+.etiqueta {
+    display: inline-block;
+    background-color: #67bcea;
+    border-radius: 5px;
+    color: var.$blanco-pokemon;
+    padding: 5px 20px;
+    font-size: x-large;
+    width: 100px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.tipo {
+    background-color: rgb(89, 89, 89);
+    border-radius: 5px;
+    color: var.$blanco-pokemon;
+    padding: 5px 20px;
+    margin-left: 5px;
+}
+
+button{
+    background-color: #fceab8;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    img{
+        height: 50px;
+        transition: 0.5s;
+        transition-timing-function: ease-in-out;
+    }
+    .flecha{
+      &.girar{
+        rotate: 180deg;
+      }
+      &:hover{
+        scale:1.1;
+      }
+    }
+  }
+
+#backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.295);
+    z-index: -1;
+    opacity: 1;
+    &.esconder{
+        pointer-events: none;
+        opacity: 0;
+    }
+}
+

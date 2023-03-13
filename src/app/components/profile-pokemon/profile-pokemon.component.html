@@ -1,0 +1,34 @@
+<div id="backdrop" [ngClass]="{esconder: !abierto}" (click)="changeEstado.emit()">
+</div>
+
+<div class="full-container">
+    <div class="container">
+        <div class="content-1">
+            <app-list-pokemon [pokemonInfo]="pokemonInfo" [seleccionado]="true"></app-list-pokemon>
+        </div>
+        <div class="content-2">
+            <p><span class="etiqueta">TIPO</span><span class="tipo"
+                    *ngFor="let tipo of pokemonInfo?.types">{{tipo.type.name}}</span></p>
+            <p><span class="etiqueta">ALTURA</span>{{pokemonInfo?.height}}"</p>
+            <p><span class="etiqueta">PESO</span>{{pokemonInfo?.weight}} lbs.</p>
+        </div>
+        <div class="content-3">
+            <div class="descripcion">
+                <div></div>
+                <p>{{descripcion}}</p>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <button (click)="changeEstado.emit()">
+        <div style="display: flex;">
+            <span>
+                <img src="./../../../assets/img/pokeball_azul.svg" alt="">
+            </span>
+            <span>
+                <img class="flecha" src="./../../../assets/img/flecha.svg" alt="" [ngClass]="{girar: abierto}">
+            </span>
+        </div>
+    </button>
+</div>>

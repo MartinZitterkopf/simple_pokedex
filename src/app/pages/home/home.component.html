@@ -1,0 +1,12 @@
+<div class="container">
+    <app-profile-pokemon [pokemonInfo]="pokemonInfo" (changeEstado)="changeEstado()" [abierto]="mostrarInfo"
+    [ngClass]="{abierto: mostrarInfo}"></app-profile-pokemon>
+    <app-card-pokemon [pokemonInfo]="pokemonInfo"
+    [ngClass]="{abierto: mostrarInfo}"></app-card-pokemon>
+    <div #list class="list-container" (scroll)="onScroll($event)">
+        <app-list-pokemon *ngFor="let pokemon of listPokemon" [data]="pokemon" (dataInfo)="infoPokemon($event)"
+        [seleccionado]="pokemon.name == pokemonInfo?.name"
+        [ngClass]="{abierto: mostrarInfo}"></app-list-pokemon>
+    </div>
+</div>
+

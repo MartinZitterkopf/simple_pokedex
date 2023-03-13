@@ -1,0 +1,58 @@
+@use "./../../../assets/styles/var.scss";
+
+.header-container {
+    background: linear-gradient(
+        to right,
+        var.$celeste-medio,
+        var.$celeste-medio 70%,
+        var.$celeste-ligero 71%,
+        var.$celeste-ligero 97%,
+        var.$celeste-suave 100%
+        );
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding: 0 20px;
+    justify-content: space-between;
+    border-bottom: 3px solid var.$celeste-oscuro;
+}
+
+.header-start {
+    display: flex;
+    align-items: center;
+    border: solid 3px var.$celeste-oscuro;
+    background-color:  var.$celeste;
+    height: 55px;
+    width: 450px;
+    border-radius: 30px;
+    justify-content: space-between;
+    padding: 0 5px;
+    color:  var.$blanco-pokemon;
+    -webkit-text-stroke: 2px black;
+    user-select: none;
+
+    img {
+        height: 50px;
+    }
+
+    h1 {
+        font-weight: 200px;
+    }
+}
+
+.header-end {
+    display: flex;
+    align-items: center;
+    height: 55px;
+    width: 200px;
+    border-radius: 30px;
+    justify-content: center;
+    background-color: var.$celeste-oscuro;
+    user-select: none;
+    border: solid 2px var.$blanco-pokemon;
+
+    a {
+        color: var.$blanco-pokemon;
+        text-decoration: none;
+    }
+}

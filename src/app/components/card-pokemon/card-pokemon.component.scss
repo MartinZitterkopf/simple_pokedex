@@ -1,0 +1,22 @@
+@use "./../../../assets/styles/var.scss";
+
+.container{
+    outline: 12px solid var.$amarillo-pokemon-intenso;
+    border: 3px solid var.$celeste-ligero;
+    border-radius: 20px;
+    aspect-ratio: 1;
+    max-width: 600px;
+    background: repeating-linear-gradient(
+        to bottom,
+        var.$blanco-pokemon,
+        var.$blanco-pokemon 15px,
+        var.$celeste-suave 15px,
+        var.$celeste-suave 20px
+
+    );
+}
+
+img{
+    width: 100%;
+    image-rendering: pixelated;
+}

@@ -1,0 +1,53 @@
+@use "./../../../assets/styles/var.scss";
+
+.container{
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+    &.seleccionado::before{
+        position: absolute;
+        content:"";
+        width: calc(100% + 10px);
+        height: 64px;
+        left: -10px;
+        background-color: #da4443;
+        z-index: -1;
+        border-radius: 5px;
+    }
+}
+
+.banner-pokemon{
+    display: flex;
+    align-items: center;
+    background: var.$amarillo-pokemon;
+    border-radius: 25px 3px 3px 25px;
+    width: 100%;
+    height: 60px;
+    font-size: x-large;
+    margin: 3px;
+    gap: 1rem;
+    padding-left: 5px;
+    &.seleccionado{
+        background-color: var.$naranja;
+        box-shadow: inset 0px 0px 7px 4px var.$amarillo-pokemon;
+    }
+
+    .circulo{
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.264);
+        height: 25px;
+        aspect-ratio: 1;
+    }
+}
+
+.icon-flecha {
+    height: 45px;
+}
+
+.icon-pokemon {
+    height: 70px;
+}
+
+
+

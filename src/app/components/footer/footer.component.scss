@@ -1,0 +1,14 @@
+@use "./../../../assets/styles/var.scss";
+
+div {
+    position: absolute;
+    bottom: 0px;
+}
+.footer {
+    line-height: 40px;
+    height: 40px;
+    width: 100%;
+    background-color: var.$celeste-ligero;
+    color: var.$blanco-pokemon;
+    border-top: 1px solid var.$celeste-oscuro;
+}
